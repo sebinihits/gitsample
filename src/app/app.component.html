@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <headercomp></headercomp>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <h1>
+    Welcome to {{ name }}!
+    Age {{ Age}}
+    Adress {{ Address.Street }}
+  </h1>
+  <img width="300" alt="Angular Logo" src="\src\assets\lambo.jpg">
+</div>
+<h2>HObbies: </h2>
+<ul>
+  <li *ngFor="let ind of hobbies">
+    {{ind}}
+  </li>
+  
+</ul>
+<form (submit)="change(hb.value)">
+<div><input type="text" [value]="name" #hb ></div>
+<div><input type="button" value="Show hobbies" (click)="change()"></div>
+</form>
+<table  *ngIf=visible><tr><th [style.font.size.px] = 50> Name</th></tr><tr *ngFor="let ind of hobbies"><td>{{ ind }}</td></tr></table>
+<app-heroes></app-heroes>
+<div>
+  Name: <input type="text" name="name" id ="" [(ngModel)]= "name" >
+</div>
+
+
+  Name: {{name}}
+  Age : {{Age}}
+  Address : {{Address.Street}}
+
+
